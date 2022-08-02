@@ -18,7 +18,12 @@
           let markedUpHTML = marked.parse(editorValue);
           previewElement.innerHTML = markedUpHTML;
         }
-  
+        
+        document.onload = setDefault();
+
+        function setDefault() {
+          let editorField = document.getElementById("editor");
+        }
   
     </script>
 
