@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="markdown-project.css">
+    <title>Markdown Project</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.18/marked.min.js" integrity="sha512-6MhVG3FdJSogKdAFmdGWvJ/QCBTPhs0dd3ad89H+ZVGJ721bOo2CTlaiG4Ov6l422KGQStYrfOD4HASBvO6sZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        // console.log(marked.parse('# Test'));
+  
+        function updatePreview() {
+          // document.getElementById("preview").innerHTML = marked.parse(document.getElementById("editor").value);
+          let previewElement = document.getElementById("preview");
+          let editorValue = document.getElementById("editor").value;
+          let markedUpHTML = marked.parse(editorValue);
+          previewElement.innerHTML = markedUpHTML;
+        }
+  
+  
+    </script>
+
+</head>
+<body>
+    <div class="container" id="container">
+        
+        <div class="editor-box" id="editor-box">
+          <h3>Editor</h3>
+          <textarea name="editor" id="editor" onkeyup="updatePreview()" cols="30" rows="10" placeholder="Content" ></textarea>
+        </div>
+
+        <div class="preview-box" id="preview-box">
+          <h3>Preview</h3>
+          <div class="preview" id="preview"></div>
+        </div>
+
+      </div>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
