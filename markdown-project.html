@@ -22,30 +22,28 @@
         window.onload = setDefault();
 
         function setDefault() {
-          let defaultText = `
+          let defaultText = `\
 # Simon's Markdown Previewer
 ## A freeCodeCamp Project
 [Project Requirements](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-markdown-previewer)
 
-<dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
+This is inline code: \`<div>Element</div>\`
 
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
-</dl>
+This is a codeblock:
+\`\`\`
+var s = "JavaScript syntax highlighting";
+alert(s);
+\`\`\`
 
-\`This is good \`
-
--Code
--All
--Day
+- Code
+- All
+- Day
 
 >This app should be useful for integrating into Obsidian
 
-![Orc Picture](orc_pic.jpg "Shump the Orc")
+![Media icon art](https://imgur.com/lAmuN8X "Media inbound!")
 
-*Linkable*
+**Linkable**
           `;
           let editorField = document.getElementById("editor");
           let previewElement = document.getElementById("preview");
