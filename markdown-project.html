@@ -19,16 +19,44 @@
           previewElement.innerHTML = markedUpHTML;
         }
         
-        document.onload = setDefault();
+        window.onload = setDefault();
 
         function setDefault() {
+          let defaultText = `
+# Simon's Markdown Previewer
+## A freeCodeCamp Project
+[Project Requirements](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-markdown-previewer)
+
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+
+\`This is good \`
+
+-Code
+-All
+-Day
+
+>This app should be useful for integrating into Obsidian
+
+[Imgur](https://i.imgur.com/Vp2ZjHr.jpg)
+
+*Linkable*
+          `;
           let editorField = document.getElementById("editor");
+          let previewElement = document.getElementById("preview");
+          editorField.value = defaultText;
+          previewElement.innerHTML = marked.parse(defaultText);
         }
   
     </script>
 
 </head>
-<body>
+<body onload="setDefault()">
     <div class="container" id="container">
         
         <div class="editor-box" id="editor-box">
