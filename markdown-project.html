@@ -9,10 +9,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.18/marked.min.js" integrity="sha512-6MhVG3FdJSogKdAFmdGWvJ/QCBTPhs0dd3ad89H+ZVGJ721bOo2CTlaiG4Ov6l422KGQStYrfOD4HASBvO6sZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
+      // Using marked library:
         // console.log(marked.parse('# Test'));
   
         function updatePreview() {
-          // document.getElementById("preview").innerHTML = marked.parse(document.getElementById("editor").value);
           let previewElement = document.getElementById("preview");
           let editorValue = document.getElementById("editor").value;
           let markedUpHTML = marked.parse(editorValue);
@@ -35,15 +35,15 @@ var s = "JavaScript syntax highlighting";
 alert(s);
 \`\`\`
 
-- Code
-- All
-- Day
+- Easy
+- Commonly used
+- Versatile
 
->This app should be useful for integrating into Obsidian
+>These techniques should be useful for integrating into Obsidian
 
-![Media icon art](https://imgur.com/lAmuN8X "Media inbound!")
+![Media icon art](data_img.png "Media inbound!")
 
-**Linkable**
+**Was this helpful?**
           `;
           let editorField = document.getElementById("editor");
           let previewElement = document.getElementById("preview");
